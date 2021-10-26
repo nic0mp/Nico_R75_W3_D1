@@ -28,7 +28,23 @@ for handle in data:
         print(handle)
     else:
         print("none")
+# ______________
+# with open("files/names.txt")as f:
+#     data = f.readlines()
+#     print(data[0])
+
+# pattern = re.compile("([A-Z][a-z]+), ([\w -]*)([A-Z][a-z]+).*\s(@[a-zA-Z0-9]+$)")
+
+# for person in data:
+#     match = pattern.search(person)
+    
+#     if match:
+#         print('\n', f"{match.group(3)} {match.group(2)}{match.group(1)} / {match.group(4)}")
 
 
 
+def authorNames():
+    author.sort(key=lambda a: a.split()[1])
+    print(author)
 
+authorNames()
