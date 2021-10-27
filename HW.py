@@ -43,8 +43,18 @@ for handle in data:
 
 
 
-def authorNames():
-    author.sort(key=lambda a: a.split()[1])
-    print(author)
+# def authorNames():
+#     author.sort(key=lambda a: a.split()[1])
+#     print(author)
 
-authorNames()
+# authorNames()
+
+patternName2 = re.compile('([A-Z][a-zA-za-z]+) ([A-Z][a-zA-Za-z]+)')
+
+for name in data:
+    match = patternName2.search(name)
+    
+    if match:
+        print(f"{match.groups(1)}")
+    else:
+        print('None')
